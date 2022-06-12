@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "354252558596",
+    "firebase_url": "https://studitime-mab.firebaseio.com",
+    "project_id": "studitime-mab",
+    "storage_bucket": "studitime-mab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:354252558596:android:de20781f87f511df",
+        "android_client_info": {
+          "package_name": "com.aperturestudios.studytime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "354252558596-vqqf5opf4f06ntk320b3kqrm943jdbac.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXC8Emx1tHYm2fC9MFJWHcWn0zMORoRiI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "354252558596-vqqf5opf4f06ntk320b3kqrm943jdbac.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

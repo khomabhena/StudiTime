@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.aperturestudios.studytime">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" /> <!-- <uses-feature android:name="android.hardware.camera2" /> -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".NoteView"
+            android:label="@string/title_activity_note_view"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SubjectList"
+            android:label="@string/title_activity_subject_list"
+            android:parentActivityName=".Timetable"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aperturestudios.studytime.Timetable" />
+        </activity>
+        <activity
+            android:name=".Timetable"
+            android:label="@string/title_activity_timetable"
+            android:parentActivityName=".Settings"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aperturestudios.studytime.Settings" />
+        </activity>
+        <activity
+            android:name=".AddSubject"
+            android:label="@string/title_activity_add_subject"
+            android:parentActivityName=".Settings"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aperturestudios.studytime.Settings" />
+        </activity>
+        <activity
+            android:name=".Settings"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aperturestudios.studytime.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Search"
+            android:label="@string/title_activity_search"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aperturestudios.studytime.MainActivity" />
+        </activity>
+        <activity
+            android:name=".AddPhotoDetails"
+            android:label="@string/title_activity_add_photo_details"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aperturestudios.studytime.MainActivity" />
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".PhoneNumber"
+            android:label="@string/title_activity_phone_number"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserType"
+            android:label="@string/title_activity_user_type"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
